@@ -24,7 +24,7 @@
 #include "libflare/strncmp.c"
 #include "libflare/strncnt.c"
 #include "libflare/strncspn.c"
-#include "libflare/bytecode.h"
+#include "libflare/xia_bytecode.h"
 #include "libflare/dec2char.c"
 #include "libflare/dec2short.c"
 #include "libflare/dec2int.c"
@@ -39,8 +39,8 @@ const char delimiters[] = {
 };
 const unsigned long opcode_length = 5;
 unsigned char get_opcode(char * name) {
-    for (unsigned char i = 0; i < sizeof(bytecode_str) / sizeof(char *); i++) {
-        if (strncmp(name, bytecode_str[i], 5) == 0) {
+    for (unsigned char i = 0; i < sizeof(xia_bytecode_str) / sizeof(char *); i++) {
+        if (strncmp(name, xia_bytecode_str[i], 5) == 0) {
             return i;
         }
     };
