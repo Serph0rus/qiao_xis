@@ -59,10 +59,10 @@ int main(int argc, char * * argv) {
         } break;
         default: {
             fprintf(stderr, "usage: qiao_s <file.xis>\n");
-            //return 1;
+            return 1;
         } break;
     };
-    FILE * file = fopen("test.xis"/*argv[1]*/, "rb");
+    FILE * file = fopen("test.xis", "rb");
     if (!file) {
         fprintf(stderr, "fopen(argv[1], \"rb\") failed\n");
         return 1;
