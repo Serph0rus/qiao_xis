@@ -1,0 +1,3 @@
+[submodule "libflare"]
+	path = libflare
+	url = https://github.com/Serph0rus/libflare.git
